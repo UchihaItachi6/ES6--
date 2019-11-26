@@ -77,8 +77,20 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
         es6可能导致解构的歧义，就不得使用圆括号也是小括号，能不用就不用。
         可以使用小括号的情况只有一种：赋值语句的非模式部分，可以使用小括号。
         
+  六：模板字符串
+        模板字符串用反引号(`)标识。
+        所有模板字符串的空格和换行，都是被保留的，比如<ul>标签前面会有一个换行。如果你不想要这个         换行，可以使用trim方法消除它。
+        字符串中嵌入变量，需要将变量名写在${}之中。
+         let name = "Bob", time = "today";
+         `Hello ${name}, how are you ${time}?`  // Hello Bob,how are you today?
+         模板字符串还能调用函数
+          function fn(){
+            return "Hello Word",
+          }
+          `foo ${fn()} bar`   //foo Hello World bar
+        
   
-  六：解构赋值的用途
+  七：解构赋值的用途
      （1）交换变量的值              以前的交换变量
           let x = 1；                  var t;
           let y = 2;                   t=a;
