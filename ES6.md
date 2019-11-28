@@ -139,7 +139,28 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
       扩展运算符（spread）是三个点（...）.
       
 十一 ： 对象的扩展     
-      
+        属性名的简洁表示法 : ES6允许在代码中直接写变量，变量名是属性名，变量值是属性值。
+          let key = "value";
+          let obj = {key};//obj {key : "value"}
+        对象的name属性：对象里的方法的name属性返回方法所对应的方法名
+        如果是对象里的get方法或者set方法，则对象方法的name属性返回get/set 函数名
+              let cat = {
+                     age:1,
+                     set mini(a){
+                       this.age = age;
+                     }s
+                     get mini(){
+                       return this.age;
+                     }
+                  }
+              cat.mini.name //undefined
+              Object.getOwnPropertyDescriptor(cat,'mini').get.name //'get mini'
+              Object.getOwnPropertyDescriptor(cat,'mini').set.name//'set mini'
+        bind方法创造的对象的函数，name属性返回的是"bound" 方法名
+                      let obj = {
+                          test(){}
+                      }s
+                      obj.test.bind().name //"bound test"
 
 
 
