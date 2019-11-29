@@ -163,11 +163,11 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
                       obj.test.bind().name //"bound test"
 十二：Set 和Map
       ES6有4种数据集合：数组（array），对象（object）,set,map.
-      set它类似于数组，但是成员的值都是唯一的，没有重复的值。Set本身是一个构造函数，用来生成 Set 数据结构。
+      Set它类似于数组，但是成员的值都是唯一的，没有重复的值。Set本身是一个构造函数，用来生成 Set 数据结构。
       Set 结构的实例有以下属性：
               Set.prototype.constructor：构造函数，默认就是Set函数。
               Set.prototype.size：返回Set实例的成员总数。
-      set有两大类，操作方法（用于操作数据）和遍历方法（用于遍历成员）。
+      Set有两大类，操作方法（用于操作数据）和遍历方法（用于遍历成员）。
             操作数据：
               Set.prototype.add(value)：添加某个值，返回 Set 结构本身。
               Set.prototype.delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
@@ -178,7 +178,7 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
               Set.prototype.values()：返回键值的遍历器
               Set.prototype.entries()：返回键值对的遍历器
               Set.prototype.forEach()：使用回调函数遍历每个成员
-       
+       Map
        
 
 
