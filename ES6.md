@@ -31,7 +31,7 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
   
 
 二：变量的解析赋值
-   let [head,..tail] = [1,2,3,4];
+   let [head,...tail] = [1,2,3,4];
    console.log(head)   //  1
    consloe.log(tail)   //2,3,4
    如果解构不成功，变量的值就等于undefined。如果右边的等号不是数组的话也会报错。
@@ -162,7 +162,7 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
                       }s
                       obj.test.bind().name //"bound test"
 十二：Set 和Map
-      ES6有4种数据集合：数组（array），对象（object），SET,MAP。
+      ES6有4种数据集合：数组（array），对象（object）,set,map.
       set它类似于数组，但是成员的值都是唯一的，没有重复的值。Set本身是一个构造函数，用来生成 Set 数据结构。
       Set 结构的实例有以下属性：
               Set.prototype.constructor：构造函数，默认就是Set函数。
@@ -178,7 +178,8 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
               Set.prototype.values()：返回键值的遍历器
               Set.prototype.entries()：返回键值对的遍历器
               Set.prototype.forEach()：使用回调函数遍历每个成员
-
+       
+       
 
 
 
