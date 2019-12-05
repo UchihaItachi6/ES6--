@@ -178,7 +178,11 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
               Set.prototype.values()：返回键值的遍历器
               Set.prototype.entries()：返回键值对的遍历器
               Set.prototype.forEach()：使用回调函数遍历每个成员
-       Map
+       Map语法： new Map([iterable])  Iterable 可以是一个数组或者其他 iterable 对象，其元素为键值对(两个元素的数组，例如: [[ 1, 'one' ],[ 2, 'two' ]])。 每个键值对都会添加到新的 Map。null 会被当做 undefined。
+       （1）一个Object的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值，包括函数、对象、基本类型。
+       （2）Map 中的键值是有序的，而添加到对象中的键则不是。因此，当对它进行遍历时，Map 对象是按插入的顺序返回键值。
+       （3）Map 的键值对个数可以从 size 属性获取，而 Object 的键值对个数只能手动计算。
+       （4）Object 都有自己的原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。
        
 十三：Iterator 和 for...of 循环
       Iterator(遍历器),Iterator 接口主要供for...of消费。
@@ -196,7 +200,26 @@ for循环的变量i跟函数内部的变量i不在同一作用域内，有各自
       生成器函数不会像其他函数一样立即执行，而是返回一个指向内部状态对象的指针，所以要调用遍历器对象Iterator 的 next 方法，指针就会从函数头部或者上      一次停下来的地方开始执行。
       写法： function* 函数名(x,y){ ...}  访问里面的值 ----函数名.next（）
       Generator里的return方法 ，可以返回固定的值，并且结束生成器函数。如果return方法调用时，不提供参数，则返回值的value属性为undefined。
+            function* foo(){
+                  yield 1;
+                  yield 2;
+                  yield 3;
+              }
+        var f = foo();
+        f.next();
+        // {value: 1, done: false}
+        f.return("foo");
+        // {value: "foo", done: true}
+        f.next();
+        // {value: undefined, done: true}
+        yield* 表达式表示 yield 返回一个遍历器对象，用于在 Generator 函数内部，调用另一个 Generator 函数。
+十五： CLASS类
+      可以通过class关键字定义类，class的本质是function。类表达式可以为匿名或者命名，但是不能重复。
+      类不会被提升，也不会有function的关键字，方法间不能加分号。
+      constructor方法是类的默认方法，创建类的实例化被调用。实例化必须要用new关键字。
       
+      
+        
    
       
       
