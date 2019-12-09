@@ -1,5 +1,4 @@
 ﻿REACT 学习笔记
-1111
  一： react的安装 ，如果没有类似umi的框架的话就要引入3个库:
         react.min.js - React 的核心库
         react-dom.min.js - 提供与 DOM 相关的功能
@@ -26,6 +25,8 @@
                    (5)使用jsx的地方，script里都要加入 type="text/babel"
                    (6)遇到{}解析的是JS的语法，遇到<>解析的是html的语言,组件里是不能写style样式.
                    (7)注意style属性要用驼峰命名法表示，如: backgroundColor 而不是 background-color，fontSize 而不是 font-size
+		   (8)key 是一个可选的唯一标识符,key是用来帮助react识别哪些内容被更改、添加或者删除,在相邻的元素间，key值必须是唯一的
+     		   (9) 虽然我们在组件上定义了key值，但是在其子组件中，我们并没有办法拿到key值，
              
 三：React组件    
      function HelloMessage(props) {
@@ -59,6 +60,7 @@
         this.setState({   count: 0 });
       }
       render(){
+      
         return(
           <div>       //最外层只能有一个标签，不一定是div，可以是组件
             <Test/>   //里面可以有多个标签跟组件
@@ -81,6 +83,9 @@
    constructor 可以理解为纯函数，render函数应该也为纯函数。
    原生的HTML元素以小写字母开头，自定义React组件开头名字要大写 ，组件里面只能包含一个顶层标签。   
    所有组件都必须有一个render的方法，用于输出组件。
+   this.state是渲染数据， this.setState是修改里面一个的值，
+   this.setsState是 只改一个值，this.replaceState是吧整个对象替换成新的
+    
    
 四：组件的生命周期
    什么是生命周期函数？  生命周期函数（钩子函数）通俗的说就是在某一时刻会被自动调用执行的函数。
